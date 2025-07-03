@@ -331,6 +331,8 @@ section {
     font-weight: 600;
     color: var(--text-color);
     margin: 0;
+    flex: 1;
+    margin-right: 1rem;
 }
 
 .course-credits {
@@ -340,16 +342,11 @@ section {
     border-radius: var(--border-radius);
     font-size: 0.875rem;
     font-weight: 500;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .course-description {
-    color: var(--text-light);
-    font-size: 0.875rem;
-    line-height: 1.5;
-    margin-bottom: 1rem;
-}
-
-.course-description-short {
     color: var(--text-light);
     font-size: 0.875rem;
     line-height: 1.5;
@@ -383,10 +380,6 @@ section {
     position: relative;
 }
 
-.course-summary {
-    display: block;
-}
-
 .course-details {
     max-height: 0;
     overflow: hidden;
@@ -395,12 +388,8 @@ section {
 }
 
 .course-card.expanded .course-details {
-    max-height: 300px;
+    max-height: 400px;
     padding-top: 1rem;
-}
-
-.course-card.expanded .course-summary {
-    display: none;
 }
 
 .course-info {

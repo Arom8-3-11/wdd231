@@ -151,14 +151,11 @@ function createCourseCard(course) {
             <span class="course-credits">${course.credits} Credits</span>
         </div>
         <div class="course-content">
-            <div class="course-summary">
-                <p class="course-description-short">${course.description.substring(0, 100)}...</p>
+            <div class="course-details">
+                <p class="course-description-full">${course.description}</p>
                 <div class="course-tech">
                     ${course.technology.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
                 </div>
-            </div>
-            <div class="course-details">
-                <p class="course-description-full">${course.description}</p>
                 <div class="course-info">
                     <p><strong>Certificate:</strong> ${course.certificate}</p>
                     <p><strong>Prerequisites:</strong> ${course.subject === 'CSE' && course.number > 110 ? 'Previous CSE course' : 'None'}</p>
