@@ -347,14 +347,14 @@ section {
 }
 
 .course-description {
-    color: var(--text-light);
+    color: var(--text-color);
     font-size: 0.875rem;
     line-height: 1.5;
     margin-bottom: 1rem;
 }
 
 .course-description-full {
-    color: var(--text-light);
+    color: var(--text-color);
     font-size: 0.875rem;
     line-height: 1.5;
     margin-bottom: 1rem;
@@ -402,6 +402,7 @@ section {
 .course-info p {
     margin: 0.5rem 0;
     font-size: 0.875rem;
+    color: var(--text-color);
 }
 
 .expand-indicator {
@@ -409,7 +410,7 @@ section {
     bottom: 1rem;
     right: 1.5rem;
     transition: transform 0.3s ease;
-    color: var(--secondary-color);
+    color: var(--text-color);
 }
 
 .course-card.expanded .expand-indicator {
