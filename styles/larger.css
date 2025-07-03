@@ -212,5 +212,29 @@
     
     main {
         padding: 4rem 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    /* Profile container responsive layout */
+    .profile-container {
+        flex-direction: row;
+        gap: 3rem;
+        align-items: flex-start;
+    }
+    
+    .about-me,
+    .student-photo {
+        flex: 1;
+        order: initial;
+    }
+    
+    .student-photo {
+        max-width: 400px;
+    }
+    
+    /* Filter buttons layout */
+    .filter-buttons {
+        gap: 1rem;
     }
 }
