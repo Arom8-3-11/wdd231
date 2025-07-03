@@ -48,7 +48,7 @@ const courses = [
         technology: [
             'C#'
         ],
-        completed: false
+        completed: true
     },
     {
         subject: 'WDD',
@@ -150,11 +150,32 @@ function createCourseCard(course) {
             <h3 class="course-title">${course.subject} ${course.number}: ${course.title}</h3>
             <span class="course-credits">${course.credits} Credits</span>
         </div>
-        <p class="course-description">${course.description}</p>
-        <div class="course-tech">
-            ${course.technology.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+        <div class="course-content">
+            <div class="course-summary">
+                <p class="course-description-short">${course.description.substring(0, 100)}...</p>
+                <div class="course-tech">
+                    ${course.technology.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+                </div>
+            </div>
+            <div class="course-details">
+                <p class="course-description-full">${course.description}</p>
+                <div class="course-info">
+                    <p><strong>Certificate:</strong> ${course.certificate}</p>
+                    <p><strong>Prerequisites:</strong> ${course.subject === 'CSE' && course.number > 110 ? 'Previous CSE course' : 'None'}</p>
+                </div>
+            </div>
+        </div>
+        <div class="expand-indicator">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+            </svg>
         </div>
     `;
+    
+    // Add click event listener for expansion
+    card.addEventListener('click', function() {
+        this.classList.toggle('expanded');
+    });
     
     return card;
 }
