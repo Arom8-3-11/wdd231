@@ -8,7 +8,25 @@
     .logo {
         width: 50px;
         height: 50px;
-        color: var(--primary-color);
+    }
+    
+    /* Logo hover color switching effect for larger screens */
+    .logo path:first-child {
+        fill: #FCF3F8; /* --bg-secondary */
+        transition: fill 0.3s ease;
+    }
+    
+    .logo path:last-child {
+        fill: #E0B1CB; /* --accent-color */
+        transition: fill 0.3s ease;
+    }
+    
+    .logo:hover path:first-child {
+        fill: #E0B1CB; /* --accent-color */
+    }
+    
+    .logo:hover path:last-child {
+        fill: #FCF3F8; /* --bg-secondary */
     }
     
     .name {
