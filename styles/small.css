@@ -48,7 +48,7 @@ body {
     padding: 0;
     margin: -1px;
     overflow: hidden;
-    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
     white-space: nowrap;
     border: 0;
 }
@@ -91,7 +91,6 @@ header {
 }
 
 .hamburger {
-    display: block;
     background: none;
     border: none;
     font-size: 1.5rem;
@@ -275,6 +274,7 @@ section {
     box-shadow: var(--shadow-sm);
     border: 1px solid var(--border-color);
     transition: all 0.3s ease;
+    position: relative;
 }
 
 .course-card:hover {
@@ -302,10 +302,6 @@ section {
     justify-content: center;
     font-weight: bold;
     font-size: 0.875rem;
-}
-
-.course-card {
-    position: relative;
 }
 
 .course-header {
