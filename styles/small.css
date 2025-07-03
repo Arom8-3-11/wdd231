@@ -10,7 +10,7 @@
     --text-color: #1f2937;
     --text-light: #BE95C4;
     --bg-color: #ffffff;
-    --bg-secondary: #f9fafb;
+    --bg-secondary: #FCF3F8;
     --header-bg: #ffffff;
     /* --nav-bg: #1e40af; */
     --border-color: #e5e7eb;
@@ -280,11 +280,12 @@ section {
 .course-card:hover {
     box-shadow: var(--shadow-md);
     transform: translateY(-2px);
+    border-color: var(--secondary-color);
 }
 
 .course-card.completed {
     border-color: var(--success-color);
-    background-color: #faf7fb;
+    background-color: var(--bg-color);
 }
 
 .course-card.completed::before {
@@ -292,7 +293,7 @@ section {
     position: absolute;
     top: 1rem;
     right: 1rem;
-    background-color: var(--success-color);
+    background-color: #059669;
     color: white;
     width: 24px;
     height: 24px;
@@ -302,6 +303,7 @@ section {
     justify-content: center;
     font-weight: bold;
     font-size: 0.875rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .course-header {
@@ -342,7 +344,7 @@ section {
 
 .tech-tag {
     background-color: var(--accent-color);
-    color: white;
+    color: var(--text-color);
     padding: 0.25rem 0.5rem;
     border-radius: var(--border-radius);
     font-size: 0.75rem;
