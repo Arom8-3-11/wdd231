@@ -1,4 +1,9 @@
 @media (min-width: 768px) {
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 3rem 2rem;
+    }
     header {
         background-color: var(--header-bg);
         padding: 1.5rem 2rem;
@@ -9,24 +14,25 @@
         width: 50px;
         height: 50px;
     }
-    
-    /* Logo hover color switching effect for larger screens */
-    .logo path:first-child {
-        fill: #FCF3F8; /* --bg-secondary */
+
+    .logo path:first-child, .logo path:last-child {
         transition: fill 0.3s ease;
+    }
+    
+    .logo path:first-child {
+        fill: #FCF3F8;
     }
     
     .logo path:last-child {
-        fill: #E0B1CB; /* --accent-color */
-        transition: fill 0.3s ease;
+        fill: #E0B1CB;
     }
     
     .logo:hover path:first-child {
-        fill: #E0B1CB; /* --accent-color */
+        fill: #E0B1CB;
     }
     
     .logo:hover path:last-child {
-        fill: #FCF3F8; /* --bg-secondary */
+        fill: #FCF3F8;
     }
     
     .name {
@@ -86,22 +92,12 @@
         transform: translateX(-50%);
     }
     
-    nav a:hover::after {
-        width: 80%;
-    }
-    
-    nav a.active::after {
+    nav a:hover::after, nav a.active::after {
         width: 80%;
     }
     
     nav a.active::before {
         display: none;
-    }
-    
-    main {
-        padding: 3rem 2rem;
-        max-width: 1200px;
-        margin: 0 auto;
     }
     
     h1 {
@@ -178,7 +174,6 @@
         font-size: 0.9rem;
     }
     
-    /* Profile container responsive layout */
     .profile-container {
         display: grid;
         grid-template-columns: 2fr 1fr;
@@ -212,19 +207,15 @@
     
     main {
         padding: 4rem 2rem;
-        max-width: 1200px;
-        margin: 0 auto;
     }
     
-    /* Profile container responsive layout */
     .profile-container {
         flex-direction: row;
         gap: 3rem;
         align-items: flex-start;
     }
     
-    .about-me,
-    .student-photo {
+    .about-me, .student-photo {
         flex: 1;
         order: initial;
     }
@@ -233,7 +224,6 @@
         max-width: 400px;
     }
     
-    /* Filter buttons layout */
     .filter-buttons {
         gap: 1rem;
     }

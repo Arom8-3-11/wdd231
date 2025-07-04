@@ -1,5 +1,3 @@
-// Course information and related functionality
-
 const courses = [
     {
         subject: 'CSE',
@@ -97,13 +95,10 @@ function setupFilterButtons() {
     
     filterButtons.forEach(button => {
         button.addEventListener('click', function() {
-            // Remove active class from all buttons
             filterButtons.forEach(btn => btn.classList.remove('active'));
             
-            // Add active class to clicked button
             this.classList.add('active');
             
-            // Get filter value and update display
             const filter = this.dataset.filter;
             currentFilter = filter;
             
@@ -169,8 +164,14 @@ function createCourseCard(course) {
         </div>
     `;
     
-    // Add click event listener for expansion
     card.addEventListener('click', function() {
+        const allCards = document.querySelectorAll('.course-card.expanded');
+        allCards.forEach(otherCard => {
+            if (otherCard !== this) {
+                otherCard.classList.remove('expanded');
+            }
+        });
+        
         this.classList.toggle('expanded');
     });
     
