@@ -1,16 +1,16 @@
 document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('nav ul');
+    const nav = document.querySelector('nav');
     
-    if (hamburger && navMenu) {
+    if (hamburger && nav) {
         hamburger.innerHTML = '☰';
         hamburger.setAttribute('aria-label', 'Toggle navigation menu');
         hamburger.setAttribute('aria-expanded', 'false');
         
         hamburger.addEventListener('click', function() {
-            const isOpen = navMenu.classList.contains('show');
+            const isOpen = nav.classList.contains('show');
             
-            navMenu.classList.toggle('show');
+            nav.classList.toggle('show');
             
             if (!isOpen) {
                 hamburger.innerHTML = '✕';
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 this.classList.add('active');
                 
                 if (window.innerWidth < 768) {
-                    navMenu.classList.remove('show');
+                    nav.classList.remove('show');
                     hamburger.innerHTML = '☰';
                     hamburger.setAttribute('aria-expanded', 'false');
                 }
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         window.addEventListener('resize', function() {
             if (window.innerWidth >= 768) {
-                navMenu.classList.remove('show');
+                nav.classList.remove('show');
                 hamburger.innerHTML = '☰';
                 hamburger.setAttribute('aria-expanded', 'false');
             }
@@ -46,9 +46,9 @@ document.addEventListener('DOMContentLoaded', function() {
         document.addEventListener('click', function(e) {
             if (window.innerWidth < 768 && 
                 !hamburger.contains(e.target) && 
-                !navMenu.contains(e.target) && 
-                navMenu.classList.contains('show')) {
-                navMenu.classList.remove('show');
+                !nav.contains(e.target) && 
+                nav.classList.contains('show')) {
+                nav.classList.remove('show');
                 hamburger.innerHTML = '☰';
                 hamburger.setAttribute('aria-expanded', 'false');
             }
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
         
-        const homeLink = document.querySelector('nav a[href="#home"]');
+        const homeLink = document.querySelector('nav a[href="index.html"]');
         if (homeLink) {
             homeLink.classList.add('active');
         }

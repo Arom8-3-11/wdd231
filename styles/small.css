@@ -72,7 +72,7 @@ header {
     padding: 1rem;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     box-shadow: var(--shadow-sm);
     border-bottom: 1px solid var(--border-color);
     position: sticky;
@@ -82,8 +82,13 @@ header {
 
 .logo-container {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     gap: 0.75rem;
+}
+
+.logo-container a {
+    display: flex;
+    align-items: flex-end;
 }
 
 .logo {
@@ -113,6 +118,8 @@ header {
     font-weight: 600;
     color: var(--bg-color);
     margin: 0;
+    align-self: flex-end;
+    line-height: 1;
 }
 
 .hamburger {
@@ -129,6 +136,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    align-self: flex-end;
 }
 
 .hamburger:hover {
@@ -148,24 +156,30 @@ nav a:focus {
 
 nav {
     background-color: var(--primary-color);
-    position: absolute;
-    top: 100%;
+    position: fixed;
+    top: 82px;
     left: 0;
     right: 0;
-    z-index: 50;
+    z-index: 1000;
     box-shadow: var(--shadow-lg);
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+    visibility: hidden;
+    opacity: 0;
+}
+
+nav.show {
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
 }
 
 nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: none;
-    flex-direction: column;
-}
-
-nav ul.show {
     display: flex;
+    flex-direction: column;
 }
 
 nav li {
