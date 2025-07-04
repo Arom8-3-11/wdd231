@@ -96,13 +96,7 @@ header {
     transform: scale(1.05);
 }
 
-.logo path:first-child {
-    fill: #FCF3F8;
-    transition: fill 0.3s ease;
-}
-
-.logo path:last-child {
-    fill: #E0B1CB;
+.logo path:first-child, .logo path:last-child {
     transition: fill 0.3s ease;
 }
 

@@ -19,14 +19,6 @@
         transition: fill 0.3s ease;
     }
     
-    .logo path:first-child {
-        fill: #FCF3F8;
-    }
-    
-    .logo path:last-child {
-        fill: #E0B1CB;
-    }
-    
     .logo:hover path:first-child {
         fill: #E0B1CB;
     }
