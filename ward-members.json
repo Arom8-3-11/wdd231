@@ -1,0 +1,36 @@
+{
+  "ward": {
+    "name": "Bozeman YSA Ward",
+    "bishop": "Bishop Brown"
+  },
+  "families": [
+    {
+      "familyName": "Johnson",
+      "dateMoved": "2023-03-15",
+      "numberOfPeople": 4,
+      "visitedByBishopric": true,
+      "members": [
+        {
+          "name": "Michael Johnson",
+          "gender": "Male",
+          "birthdate": "1985-07-22"
+        },
+        {
+          "name": "Sarah Johnson",
+          "gender": "Female",
+          "birthdate": "1987-11-08"
+        },
+        {
+          "name": "Emma Johnson",
+          "gender": "Female",
+          "birthdate": "2012-04-14"
+        },
+        {
+          "name": "Jacob Johnson",
+          "gender": "Male",
+          "birthdate": "2015-09-03"
+        }
+      ]
+    }
+  ]
+}
