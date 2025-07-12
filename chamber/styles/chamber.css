@@ -237,7 +237,7 @@ main h2 {
 
 .membership-level.gold {
     background-color: #fbbf24;
-    color: #92400e;
+    color: var(--text-color);
 }
 
 .membership-level.silver {
