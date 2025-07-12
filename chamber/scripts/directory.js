@@ -6,12 +6,15 @@ const listViewBtn = document.getElementById('list-view');
 const getMembers = async () => {
     try {
         const response = await fetch(membersUrl);
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
         const data = await response.json();
         console.log('Members data loaded:', data);
         displayMembers(data.members);
     } catch (error) {
         console.error('Error fetching members:', error);
-        membersContainer.innerHTML = '<p>Error loading member data. Please try again later.</p>';
+        membersContainer.innerHTML = '<p role="alert">Error loading member data. Please try again later.</p>';
     }
 };
 
@@ -21,6 +24,7 @@ const displayMembers = (members) => {
     members.forEach((member) => {
         const memberCard = document.createElement('div');
         memberCard.classList.add('member-card');
+        memberCard.setAttribute('role', 'article');
         
         const membershipInfo = getMembershipInfo(member.membershipLevel);
         
@@ -29,9 +33,9 @@ const displayMembers = (members) => {
                 <h3>${member.name}</h3>
                 <p class="address">${member.address}</p>
                 <p class="phone">${member.phone}</p>
-                <p class="website"><a href="${member.website}" target="_blank" rel="noopener noreferrer">Visit Website</a></p>
+                <p class="website"><a href="${member.website}" target="_blank" rel="noopener noreferrer" aria-label="Visit ${member.name} website">Visit Website</a></p>
                 <p class="description">${member.description}</p>
-                <span class="membership-level ${membershipInfo.class}">${membershipInfo.text}</span>
+                <span class="membership-level ${membershipInfo.class}" role="status" aria-label="Membership level: ${membershipInfo.text}">${membershipInfo.text}</span>
             </div>
         `;
         
@@ -56,10 +60,14 @@ const toggleView = (viewType) => {
         membersContainer.className = 'members-grid';
         gridViewBtn.classList.add('active');
         listViewBtn.classList.remove('active');
+        gridViewBtn.setAttribute('aria-pressed', 'true');
+        listViewBtn.setAttribute('aria-pressed', 'false');
     } else {
         membersContainer.className = 'members-list';
         listViewBtn.classList.add('active');
         gridViewBtn.classList.remove('active');
+        listViewBtn.setAttribute('aria-pressed', 'true');
+        gridViewBtn.setAttribute('aria-pressed', 'false');
     }
 };
 
@@ -68,10 +76,12 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (gridViewBtn) {
         gridViewBtn.addEventListener('click', () => toggleView('grid'));
+        gridViewBtn.setAttribute('aria-pressed', 'true');
     }
     
     if (listViewBtn) {
         listViewBtn.addEventListener('click', () => toggleView('list'));
+        listViewBtn.setAttribute('aria-pressed', 'false');
     }
 });
 
