@@ -336,6 +336,10 @@ footer {
     padding-right: 1rem;
 }
 
+.member-card .website {
+    margin-bottom: 1rem;
+}
+
 .member-card .website a {
     color: var(--secondary-color);
     text-decoration: none;
@@ -415,8 +419,7 @@ footer {
         border-bottom: none;
     }
 
-    .logo-container h1,
-    main h1 {
+    .logo-container h1 {
         font-size: 1.2rem;
     }
 
