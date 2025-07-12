@@ -1,0 +1,84 @@
+{
+  "members": [
+    {
+      "name": "Montana Tech Solutions",
+      "address": "123 Main Street, Bozeman, MT 59715",
+      "phone": "(406) 555-0123",
+      "website": "https://montanatech.example.com",
+      "image": "montana-tech.jpg",
+      "membershipLevel": 3,
+      "description": "Leading technology consulting firm specializing in software development and IT services.",
+      "industry": "Technology"
+    },
+    {
+      "name": "Rocky Mountain Coffee Roasters",
+      "address": "456 River Road, Bozeman, MT 59718",
+      "phone": "(406) 555-0456",
+      "website": "https://rockymountaincoffee.example.com",
+      "image": "coffee-roasters.jpg",
+      "membershipLevel": 2,
+      "description": "Locally owned coffee roastery serving premium, sustainably sourced coffee beans.",
+      "industry": "Food & Beverage"
+    },
+    {
+      "name": "Gallatin Valley Bank",
+      "address": "789 Business Plaza, Bozeman, MT 59715",
+      "phone": "(406) 555-0789",
+      "website": "https://gallatinvalleybank.example.com",
+      "image": "gallatin-bank.jpg",
+      "membershipLevel": 3,
+      "description": "Community bank providing comprehensive financial services to local businesses and residents.",
+      "industry": "Financial Services"
+    },
+    {
+      "name": "Big Sky Adventures",
+      "address": "321 Mountain View Drive, Bozeman, MT 59718",
+      "phone": "(406) 555-0321",
+      "website": "https://bigskyadventures.example.com",
+      "image": "big-sky-adventures.jpg",
+      "membershipLevel": 2,
+      "description": "Outdoor recreation company offering guided tours, equipment rentals, and adventure experiences.",
+      "industry": "Tourism & Recreation"
+    },
+    {
+      "name": "Montana Community Food Bank",
+      "address": "654 Community Center Way, Bozeman, MT 59715",
+      "phone": "(406) 555-0654",
+      "website": "https://montanafoodbank.example.com",
+      "image": "food-bank.jpg",
+      "membershipLevel": 1,
+      "description": "Non-profit organization dedicated to fighting hunger in the Gallatin Valley community.",
+      "industry": "Non-Profit"
+    },
+    {
+      "name": "Bridger Peak Construction",
+      "address": "987 Industrial Way, Bozeman, MT 59718",
+      "phone": "(406) 555-0987",
+      "website": "https://bridgerpeakconstruction.example.com",
+      "image": "bridger-construction.jpg",
+      "membershipLevel": 3,
+      "description": "Full-service construction company specializing in commercial and residential projects.",
+      "industry": "Construction"
+    },
+    {
+      "name": "Yellowstone Legal Services",
+      "address": "147 Professional Building, Bozeman, MT 59715",
+      "phone": "(406) 555-0147",
+      "website": "https://yellowstonelegal.example.com",
+      "image": "legal-services.jpg",
+      "membershipLevel": 2,
+      "description": "Law firm providing comprehensive legal services to businesses and individuals.",
+      "industry": "Legal Services"
+    },
+    {
+      "name": "Prairie Wind Veterinary Clinic",
+      "address": "258 Animal Care Drive, Bozeman, MT 59718",
+      "phone": "(406) 555-0258",
+      "website": "https://prairiewindvet.example.com",
+      "image": "veterinary-clinic.jpg",
+      "membershipLevel": 1,
+      "description": "Full-service veterinary clinic providing comprehensive care for pets and livestock.",
+      "industry": "Veterinary Services"
+    }
+  ]
+}
