@@ -1,11 +1,8 @@
-// Directory Page JavaScript
-
 const membersUrl = 'data/members.json';
 const membersContainer = document.getElementById('members-container');
 const gridViewBtn = document.getElementById('grid-view');
 const listViewBtn = document.getElementById('list-view');
 
-// Fetch and display members
 const getMembers = async () => {
     try {
         const response = await fetch(membersUrl);
@@ -18,7 +15,6 @@ const getMembers = async () => {
     }
 };
 
-// Display members function
 const displayMembers = (members) => {
     membersContainer.innerHTML = '';
     
@@ -26,7 +22,6 @@ const displayMembers = (members) => {
         const memberCard = document.createElement('div');
         memberCard.classList.add('member-card');
         
-        // Get membership level text and class
         const membershipInfo = getMembershipInfo(member.membershipLevel);
         
         memberCard.innerHTML = `
@@ -44,7 +39,6 @@ const displayMembers = (members) => {
     });
 };
 
-// Get membership level information
 const getMembershipInfo = (level) => {
     switch (level) {
         case 3:
@@ -57,7 +51,6 @@ const getMembershipInfo = (level) => {
     }
 };
 
-// View toggle functionality
 const toggleView = (viewType) => {
     if (viewType === 'grid') {
         membersContainer.className = 'members-grid';
@@ -70,12 +63,9 @@ const toggleView = (viewType) => {
     }
 };
 
-// Event listeners
 document.addEventListener('DOMContentLoaded', function() {
-    // Load members data
     getMembers();
     
-    // View toggle buttons
     if (gridViewBtn) {
         gridViewBtn.addEventListener('click', () => toggleView('grid'));
     }
@@ -84,3 +74,4 @@ document.addEventListener('DOMContentLoaded', function() {
         listViewBtn.addEventListener('click', () => toggleView('list'));
     }
 });
+
