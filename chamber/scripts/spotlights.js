@@ -41,7 +41,7 @@ function displaySpotlights(members) {
             <h3>${member.name}</h3>
             <p><strong>Phone:</strong> ${member.phone}</p>
             <p><strong>Address:</strong> ${member.address}</p>
-            <p><strong>Website:</strong> <a href="${member.website}" target="_blank">${member.website}</a></p>
+            <div class="website"> <a href="${member.website}" target="_blank">Website</a></div>
             <span class="membership-level ${membershipLevel.toLowerCase()}">${membershipLevel} Member</span>
         `;
         
