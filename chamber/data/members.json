@@ -77,35 +77,35 @@
       "address": "101 W Main St, Belgrade, MT 59714",
       "phone": "(406) 388-3347",
       "website": "https://www.belgradebank.com",
-      "membershipLevel": "Gold"
+      "membershipLevel": 3
     },
     {
       "name": "Valley Motors",
       "address": "5975 Jackrabbit Ln, Belgrade, MT 59714",
       "phone": "(406) 388-4995",
       "website": "https://www.valleymotors.com",
-      "membershipLevel": "Silver"
+      "membershipLevel": 2
     },
     {
       "name": "Belgrade Hardware",
       "address": "19 W Main St, Belgrade, MT 59714",
       "phone": "(406) 388-4711",
       "website": "https://www.belgradehardware.com",
-      "membershipLevel": "Gold"
+      "membershipLevel": 1
     },
     {
       "name": "Montana Coffee Traders",
       "address": "237 W Main St, Belgrade, MT 59714",
       "phone": "(406) 388-8300",
       "website": "https://www.coffeetraders.com",
-      "membershipLevel": "Silver"
+      "membershipLevel": 3
     },
     {
       "name": "Belgrade Family Dental",
       "address": "1235 S Main St, Belgrade, MT 59714",
       "phone": "(406) 388-8258",
       "website": "https://www.belgradedental.com",
-      "membershipLevel": "Gold"
+      "membershipLevel": 2
     }
   ]
 }
