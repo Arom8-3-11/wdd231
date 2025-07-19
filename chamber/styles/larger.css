@@ -53,10 +53,11 @@
     }
 
     .footer-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        text-align: left;
+        text-align: center;
+    }
+
+    .footer-bottom {
+        border-top: 2px solid var(--secondary-color);
     }
 }
 
@@ -83,6 +84,10 @@
 
     .forecast-item {
         padding: 2rem;
+    }
+
+    .footer-bottom {
+        border-top: 3px solid var(--secondary-color);
     }
 }
 

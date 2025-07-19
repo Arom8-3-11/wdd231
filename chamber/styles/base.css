@@ -25,6 +25,7 @@ body {
     background-color: var(--background-color);
 }
 
+/* Header */
 header {
     background-color: var(--primary-color);
     color: var(--white);
@@ -52,6 +53,7 @@ header {
     object-fit: contain;
 }
 
+/* Nav */
 .hamburger {
     display: none;
     background: none;
@@ -116,68 +118,7 @@ nav a.active {
     color: var(--text-color);
 }
 
-@media (max-width: 768px) {
-    .hamburger {
-        display: block;
-    }
-
-    nav ul {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100vw;
-        background-color: var(--primary-color);
-        box-shadow: 0 4px 6px var(--shadow-light);
-        z-index: 1000;
-        padding: 0;
-        opacity: 0;
-        transform: translateY(-10px);
-        transition: all 0.3s ease;
-    }
-
-    nav ul.show {
-        display: flex;
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    nav li {
-        width: 100%;
-        transform: translateX(-100%);
-        transition: transform 0.3s ease;
-    }
-
-    nav ul.show li {
-        transform: translateX(0);
-    }
-
-    nav ul.show li:nth-child(1) { transition-delay: 0.1s; }
-    nav ul.show li:nth-child(2) { transition-delay: 0.2s; }
-    nav ul.show li:nth-child(3) { transition-delay: 0.3s; }
-    nav ul.show li:nth-child(4) { transition-delay: 0.4s; }
-
-    nav a {
-        padding: 1rem;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        transition: all 0.3s ease;
-    }
-
-    nav a:hover,
-    nav a:focus {
-        background-color: var(--accent-color);
-        color: var(--text-color);
-        padding-left: 2rem;
-        border-left: 4px solid var(--secondary-color);
-    }
-
-    nav a:last-child {
-        border-bottom: none;
-    }
-}
-
-
+/* Main */
 main {
     padding: 1rem;
 }
@@ -191,6 +132,7 @@ main h1 {
     overflow: hidden;
 }
 
+/* Hero */
 .hero {
     position: relative;
     margin-bottom: 2rem;
@@ -244,14 +186,30 @@ main h1 {
     background-color: var(--secondary-color);
 }
 
-.current-events {
+/* Events/Weather */
+.current-events,
+.weather {
     margin-bottom: 2rem;
     text-align: center;
 }
 
-.current-events h2 {
+.current-events h2,
+.weather h2 {
     color: var(--primary-color);
     margin-bottom: 1rem;
+}
+
+.event,
+.weather {
+    background-color: var(--accent-color);
+    padding: 1.5rem;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.event {
+    border-left: 4px solid var(--secondary-color);
+    text-align: center;
 }
 
 .events-container {
@@ -260,31 +218,10 @@ main h1 {
     gap: 1rem;
 }
 
-.event {
-    background-color: var(--accent-color);
-    padding: 1.5rem;
-    border-radius: 5px;
-    border-left: 4px solid var(--secondary-color);
-    text-align: center;
-}
-
 .event-date {
     color: var(--primary-color);
     font-weight: bold;
     margin-bottom: 0.5rem;
-}
-
-.weather {
-    background-color: var(--accent-color);
-    padding: 1.5rem;
-    border-radius: 5px;
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
-.weather h2 {
-    color: var(--primary-color);
-    margin-bottom: 1rem;
 }
 
 .weather-current {
@@ -317,6 +254,7 @@ main h1 {
     text-align: center;
 }
 
+/* Spotlights */
 .spotlights {
     text-align: center;
 }
@@ -407,6 +345,7 @@ main h1 {
     color: var(--primary-color);
 }
 
+/* Footer */
 footer {
     background-color: var(--primary-color);
     color: var(--white);
@@ -428,6 +367,68 @@ footer {
     border-top: 1px solid var(--secondary-color);
 }
 
+/* Media Queries */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100vw;
+        background-color: var(--primary-color);
+        box-shadow: 0 4px 6px var(--shadow-light);
+        z-index: 1000;
+        padding: 0;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+    }
+
+    nav ul.show {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    nav li {
+        width: 100%;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    nav ul.show li {
+        transform: translateX(0);
+    }
+
+    nav ul.show li:nth-child(1) { transition-delay: 0.1s; }
+    nav ul.show li:nth-child(2) { transition-delay: 0.2s; }
+    nav ul.show li:nth-child(3) { transition-delay: 0.3s; }
+    nav ul.show li:nth-child(4) { transition-delay: 0.4s; }
+
+    nav a {
+        padding: 1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    nav a:hover,
+    nav a:focus {
+        background-color: var(--accent-color);
+        color: var(--text-color);
+        padding-left: 2rem;
+        border-left: 4px solid var(--secondary-color);
+    }
+
+    nav a:last-child {
+        border-bottom: none;
+    }
+}
+
 @media (min-width: 768px) {
     nav {
         display: flex;
@@ -447,18 +448,19 @@ footer {
         margin-bottom: 3rem;
     }
     
-    .current-events {
+    .current-events,
+    .weather {
         margin-bottom: 0;
+    }
+
+    .current-events {
         order: 1;
     }
 
     .weather {
-        margin-bottom: 0;
         order: 2;
     }
-}
 
-@media (min-width: 768px) {
     .spotlight-container {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 2rem;
