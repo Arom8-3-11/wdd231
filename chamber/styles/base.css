@@ -274,7 +274,6 @@ main h1 {
     margin-bottom: 0.5rem;
 }
 
-/* Weather Section */
 .weather {
     background-color: var(--accent-color);
     padding: 1.5rem;
@@ -318,7 +317,6 @@ main h1 {
     text-align: center;
 }
 
-/* Spotlights Section */
 .spotlights {
     text-align: center;
 }
@@ -339,12 +337,18 @@ main h1 {
 }
 
 .spotlight-card {
-    background-color: var(--white);
+    background-color: var(--accent-color);
     border: 1px solid var(--border-color);
     border-radius: 5px;
     padding: 1rem;
     text-align: center;
     box-shadow: 0 4px 6px var(--shadow-light);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.spotlight-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px var(--shadow-medium);
 }
 
 .spotlight-card img {
@@ -357,6 +361,31 @@ main h1 {
 .spotlight-card h3 {
     color: var(--primary-color);
     margin-bottom: 0.5rem;
+}
+
+.spotlight-card .website {
+    margin-bottom: 1rem;
+}
+
+.spotlight-card .website a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.spotlight-card .website a:hover,
+.spotlight-card .website a:focus {
+    color: var(--primary-color);
+    text-decoration: underline;
+    border-bottom: 2px solid var(--primary-color);
+    background-color: var(--accent-color);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    transform: scale(1.05);
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
 }
 
 .membership-level {
@@ -374,11 +403,10 @@ main h1 {
 }
 
 .membership-level.silver {
-    background-color: #95a5a6;
-    color: var(--white);
+    background-color: var(--white);
+    color: var(--primary-color);
 }
 
-/* Footer */
 footer {
     background-color: var(--primary-color);
     color: var(--white);
@@ -400,7 +428,6 @@ footer {
     border-top: 1px solid var(--secondary-color);
 }
 
-/* Events and Weather Side by Side */
 @media (min-width: 768px) {
     nav {
         display: flex;
