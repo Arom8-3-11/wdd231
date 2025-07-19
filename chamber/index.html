@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belgrade Chamber of Commerce - Home</title>
+    <meta name="description" content="Welcome to the Belgrade Chamber of Commerce. Join us to grow your business and connect with the community in Belgrade, Montana.">
+    <meta name="author" content="Your Name">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="icon" href="favicon.ico">
+    <script src="scripts/spotlights.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="images/logo.jpg" alt="Belgrade Chamber of Commerce Logo" class="logo">
+            </div>
+            <button class="hamburger" aria-label="Toggle navigation menu">☰</button>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <img src="images/hero.jpg" alt="Belgrade Montana Downtown" class="hero-image">
+            <div class="hero-content">
+                <h2>Welcome to the Belgrade Chamber of Commerce</h2>
+                <p>Growing business, building community</p>
+                <a href="join.html" class="cta-button">Join the Chamber</a>
+            </div>
+        </section>
+
+        <div class="events-weather-container">
+            <section class="current-events">
+                <h2>Current Events</h2>
+                <div class="events-container">
+                    <div class="event">
+                        <h3>Business Networking Mixer</h3>
+                        <p class="event-date">December 15, 2024</p>
+                        <p>Join fellow business owners for networking and refreshments at the Belgrade Community Center.</p>
+                    </div>
+                    <div class="event">
+                        <h3>Holiday Market</h3>
+                        <p class="event-date">December 20-22, 2024</p>
+                        <p>Annual holiday market featuring local vendors and artisans. Perfect for holiday shopping!</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="weather">
+                <h2>Belgrade Weather</h2>
+                <div class="weather-current">
+                    <div class="current-temp">
+                        <span id="current-temperature">--</span>°F
+                    </div>
+                    <div class="current-desc" id="weather-description">Loading...</div>
+                </div>
+                <div class="weather-forecast">
+                    <h3>3-Day Forecast</h3>
+                    <div class="forecast-container" id="forecast-container">
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section class="spotlights">
+            <h2>Member Spotlights</h2>
+            <div class="spotlight-container" id="spotlight-container">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Belgrade Chamber of Commerce</h3>
+                <p>123 Main Street<br>Belgrade, MT 59714</p>
+                <p>Phone: (406) 555-0123<br>Email: info@belgradechamber.org</p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentyear"></span> Belgrade Chamber of Commerce</p>
+                <p>Last Modified: <span id="lastmodified"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
+

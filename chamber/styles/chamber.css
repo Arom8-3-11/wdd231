@@ -98,6 +98,7 @@ nav ul {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
+    justify-content: center;
 }
 
 nav li {
@@ -388,6 +389,7 @@ footer {
         opacity: 0;
         transform: translateY(-10px);
         transition: all 0.3s ease;
+        justify-content: flex-start;
     }
 
     nav ul.show {
