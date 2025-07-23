@@ -142,7 +142,7 @@ function createCourseCard(course) {
     
     card.innerHTML = `
         <div class="course-header">
-            <h3 class="course-title">${course.subject} ${course.number}: ${course.title}</h3>
+            <h3 class="course-title">${course.subject} ${course.number}</h3>
             <span class="course-credits">${course.credits} Credits</span>
         </div>
         <div class="course-content">
@@ -157,22 +157,23 @@ function createCourseCard(course) {
                 </div>
             </div>
         </div>
-        <div class="expand-indicator">
-            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-            </svg>
-        </div>
+
     `;
     
-    card.addEventListener('click', function() {
-        const allCards = document.querySelectorAll('.course-card.expanded');
-        allCards.forEach(otherCard => {
-            if (otherCard !== this) {
-                otherCard.classList.remove('expanded');
-            }
-        });
+    // card.addEventListener('click', function() {
+    //     const allCards = document.querySelectorAll('.course-card.expanded');
+    //     allCards.forEach(otherCard => {
+    //         if (otherCard !== this) {
+    //             otherCard.classList.remove('expanded');
+    //         }
+    //     });
         
-        this.classList.toggle('expanded');
+    //     this.classList.toggle('expanded');
+    // });
+    
+    // Add event listener to display course details in modal
+    card.addEventListener('click', () => {
+        displayCourseDetails(course);
     });
     
     return card;
@@ -191,4 +192,33 @@ function updateCreditsDisplay(coursesToDisplay) {
                      currentFilter === 'wdd' ? 'WDD Courses' : 'CSE Courses';
     
     creditsDisplay.textContent = `${filterText}: ${totalCredits} Credits Required`;
+}
+
+// Get the modal dialog element
+const courseDetails = document.getElementById('course-details');
+
+function displayCourseDetails(course) {
+  courseDetails.innerHTML = '';
+  courseDetails.innerHTML = `
+    <button id="closeModal">❌</button>
+    <h2>${course.subject} ${course.number}</h2>
+    <h3>${course.title}</h3>
+    <p><strong>Credits</strong>: ${course.credits}</p>
+    <p><strong>Certificate</strong>: ${course.certificate}</p>
+    <p>${course.description}</p>
+    <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p>
+  `;
+  courseDetails.showModal();
+  
+  const closeModal = document.getElementById('closeModal');
+  closeModal.addEventListener("click", () => {
+    courseDetails.close();
+  });
+  
+  // Close modal when clicking outside of it
+  courseDetails.addEventListener('click', (e) => {
+    if (e.target === courseDetails) {
+      courseDetails.close();
+    }
+  });
 }
