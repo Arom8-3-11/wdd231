@@ -144,10 +144,6 @@ input, textarea, select {
     color: var(--text-color);
 }
 
-input {
-    /* Remove margin here to avoid affecting submit button alignment */
-    /* margin: 1rem; */
-}
 
 input:focus, textarea:focus {
     outline: none;
