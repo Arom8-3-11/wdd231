@@ -3,6 +3,9 @@
     .menu-toggle {
         display: none;
     }
+    .hamburger {
+        display: none !important;
+    }
 
     .nav-links {
         display: flex !important;
