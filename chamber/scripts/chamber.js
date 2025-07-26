@@ -70,4 +70,18 @@ document.addEventListener('DOMContentLoaded', function() {
     } catch (error) {
         console.error('Error initializing chamber functionality:', error);
     }
+    
+    const navUl = document.querySelector('nav ul');
+    if (hamburger && navUl) {
+        hamburger.addEventListener('click', function() {
+            navUl.classList.toggle('show');
+            hamburger.classList.toggle('open');
+        });
+        navUl.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navUl.classList.remove('show');
+                hamburger.classList.remove('open');
+            });
+        });
+    }
 });
