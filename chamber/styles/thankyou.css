@@ -16,6 +16,70 @@ body {
     background-color: var(--background-color);
 }
 
+.hamburger {
+    display: block;
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    min-height: 44px;
+    min-width: 44px;
+}
+
+.hamburger:hover,
+.hamburger:focus {
+    color: var(--text-color);
+    background-color: var(--accent-color);
+    transform: scale(1.1);
+    box-shadow: 0 2px 8px var(--shadow-medium);
+}
+
+.hamburger.open {
+    font-size: 1.8rem;
+    transform: rotate(90deg);
+}
+
+.hamburger.open:hover,
+.hamburger.open:focus {
+    transform: rotate(90deg) scale(1.1);
+}
+
+nav {
+    background-color: var(--primary-color);
+    box-shadow: 0 2px 4px var(--shadow-light);
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    display: block;
+    color: var(--white);
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+}
+
 main {
     max-width: 1200px;
     margin: 0 auto;

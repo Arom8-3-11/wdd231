@@ -13,7 +13,7 @@
 }
 
 .hamburger {
-    display: none;
+    display: block;
     background: none;
     border: none;
     color: var(--white);
