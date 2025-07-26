@@ -145,7 +145,8 @@ input, textarea, select {
 }
 
 input {
-    margin: 1rem;
+    /* Remove margin here to avoid affecting submit button alignment */
+    /* margin: 1rem; */
 }
 
 input:focus, textarea:focus {
@@ -180,7 +181,7 @@ fieldset input[type="radio"] {
 
 .submit-btn {
     width: 100%;
-    background: var(--secondary-color);
+    background: var(--primary-color);
     color: var(--white);
     padding: 1rem;
     border: none;
@@ -188,11 +189,15 @@ fieldset input[type="radio"] {
     font-size: 1.1rem;
     font-weight: bold;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, color 0.3s ease;
+    margin: 0; /* Ensure no extra margin */
+    display: block; /* Ensures it fills the width of the form */
+    box-sizing: border-box;
 }
 
 .submit-btn:hover {
-    background: var(--primary-color);
+    background: var(--accent-color);
+    color: var(--primary-color);
 }
 
 .membership-benefits {
@@ -255,16 +260,17 @@ fieldset input[type="radio"] {
 
 .info-link {
     display: inline-block;
-    background: var(--secondary-color);
+    background: var(--primary-color);
     color: var(--white);
     padding: 0.5rem 1rem;
     text-decoration: none;
     border-radius: 4px;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 .info-link:hover {
-    background: var(--primary-color);
+    background: var(--white);
+    color: var(--primary-color);
 }
 
 /* Modal Styles */

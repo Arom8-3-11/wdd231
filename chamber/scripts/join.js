@@ -1,4 +1,65 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // membership form
+    const formContainer = document.getElementById('membership-form-container');
+    if (formContainer) {
+        formContainer.innerHTML = `
+        <section class="membership-form">
+            <h2>Membership Application</h2>
+            <form id="membershipForm" action="thankyou.html" method="get">
+                <fieldset>
+                    <legend>Applicant Information</legend>
+                    <label for="firstName" title="Enter your first name">
+                        First Name *
+                        <input type="text" id="firstName" name="firstName" title="Enter your first name" autocomplete="given-name" required>
+                    </label>
+                    <label for="lastName" title="Enter your last name">
+                        Last Name *
+                        <input type="text" id="lastName" name="lastName" title="Enter your last name" autocomplete="family-name" required>
+                    </label>
+                    <label for="title" title="Enter your organizational title (minimum 7 characters, letters, hyphens, and spaces only)">
+                        Title
+                        <input type="text" id="title" name="title" title="Enter your organizational title" autocomplete="organization-title" pattern="[A-Za-z\\s\\-]{7,}">
+                    </label>
+                    <label for="email" title="Enter your email address">
+                        Email Address *
+                        <input type="email" id="email" name="email" title="Enter your email address" autocomplete="email" placeholder="example@email.com" required>
+                    </label>
+                    <label for="phone" title="Enter your mobile phone number">
+                        Mobile Phone Number *
+                        <input type="tel" id="phone" name="phone" title="Enter your mobile phone number" autocomplete="tel" required>
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <legend>Business Information</legend>
+                    <label for="businessName" title="Enter your business or organization name">
+                        Organization Name *
+                        <input type="text" id="businessName" name="businessName" title="Enter your business or organization name" autocomplete="organization" required>
+                    </label>
+                    <label for="businessDescription" title="Describe your business or organization">
+                        Organization Description
+                        <textarea id="businessDescription" name="businessDescription" title="Describe your business or organization" rows="4" placeholder="Describe your business, products, or services"></textarea>
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <legend>Membership Level</legend>
+                    <label for="membershipLevel" title="Select your membership level">
+                        Membership Level *
+                        <select id="membershipLevel" name="membershipLevel" title="Select your membership level" required>
+                            <option value="">Please select a membership level</option>
+                            <option value="NP Membership">NP Membership (Non-profit - No Fee)</option>
+                            <option value="Bronze Membership">Bronze Membership</option>
+                            <option value="Silver Membership">Silver Membership</option>
+                            <option value="Gold Membership">Gold Membership</option>
+                        </select>
+                    </label>
+                </fieldset>
+                <input type="hidden" id="timestamp" name="timestamp">
+                <input type="submit" value="Submit Application" class="submit-btn">
+            </form>
+        </section>
+        `;
+    }
+
     // Set timestamp when form loads
     document.getElementById('timestamp').value = new Date().toISOString();
     
@@ -26,7 +87,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Close modal when clicking outside
     window.addEventListener('click', function(e) {
         modals.forEach(modal => {
             if (e.target === modal) {
@@ -43,12 +103,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Highlight corresponding benefit card when membership level is selected
     membershipRadios.forEach(radio => {
         radio.addEventListener('change', function() {
-            // Remove highlight from all cards
             benefitCards.forEach(card => {
                 card.classList.remove('selected');
             });
             
-            // Highlight selected membership level card
             const selectedCard = document.querySelector(`[data-level="${this.id}"]`);
             if (selectedCard) {
                 selectedCard.classList.add('selected');
@@ -58,11 +116,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Form submission handling
     form.addEventListener('submit', function(e) {
-        // Update timestamp just before submission
         document.getElementById('timestamp').value = new Date().toISOString();
     });
     
-    // Phone number formatting
     const phoneInput = document.getElementById('phone');
     phoneInput.addEventListener('input', function() {
         let value = this.value.replace(/\D/g, '');
@@ -74,7 +130,6 @@ document.addEventListener('DOMContentLoaded', function() {
         this.value = value;
     });
     
-    // Animate cards on page load
     setTimeout(() => {
         benefitCards.forEach((card, index) => {
             setTimeout(() => {
