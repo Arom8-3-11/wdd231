@@ -231,22 +231,6 @@ function initializeThankYouPage() {
 document.addEventListener('DOMContentLoaded', function() {
     initializeThankYouPage();
 
-    // Hamburger menu toggle for mobile (consistent with index/directory)
-    const hamburger = document.querySelector('.hamburger');
-    const nav = document.querySelector('nav ul');
-    if (hamburger && nav) {
-        hamburger.addEventListener('click', function() {
-            nav.classList.toggle('show');
-            hamburger.classList.toggle('open');
-        });
-        nav.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                nav.classList.remove('show');
-                hamburger.classList.remove('open');
-            });
-        });
-    }
-
     // Animate thank-you-hero gradient background horizontally left-to-right and right-to-left
     const thankYouHero = document.querySelector('.thank-you-hero');
     if (thankYouHero) {
