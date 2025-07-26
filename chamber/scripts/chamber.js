@@ -6,7 +6,11 @@ document.addEventListener('DOMContentLoaded', function() {
             yearElement.textContent = currentYear;
         }
         
-        const lastModified = document.lastModified;
+        const lastModified = new Date(document.lastModified).toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
         const lastModifiedElement = document.getElementById('lastModified');
         if (lastModifiedElement) {
             lastModifiedElement.textContent = lastModified;

@@ -1,0 +1,415 @@
+:root {
+    --primary-color: #22571C;
+    --primary-light: #dbeafe;
+    --secondary-color: #059669;
+    --secondary-light: #d1fae5;
+    --accent-color: #e8f5e8;
+    --text-color: #1f2937;
+    --background-color: #f9fafb;
+    --white: #ffffff;
+    --border-color: #e5e7eb;
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --shadow-medium: rgba(0, 0, 0, 0.15);
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    min-height: 44px;
+    min-width: 44px;
+}
+
+.hamburger:hover,
+.hamburger:focus {
+    color: var(--text-color);
+    background-color: var(--accent-color);
+    transform: scale(1.1);
+    box-shadow: 0 2px 8px var(--shadow-medium);
+}
+
+.hamburger.open {
+    font-size: 1.8rem;
+    transform: rotate(90deg);
+}
+
+.hamburger.open:hover,
+.hamburger.open:focus {
+    transform: rotate(90deg) scale(1.1);
+}
+
+nav {
+    background-color: var(--primary-color);
+    box-shadow: 0 2px 4px var(--shadow-light);
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    display: block;
+    color: var(--white);
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+}
+
+.join-hero {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    text-align: center;
+    padding: 3rem 1rem;
+    margin-bottom: 2rem;
+}
+
+.join-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.form-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.membership-form {
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px var(--shadow-light);
+    padding: 2rem;
+}
+
+.membership-form h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+fieldset {
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    background: var(--accent-color);
+}
+
+legend {
+    font-weight: bold;
+    color: var(--primary-color);
+    padding: 0 1rem;
+    background: var(--white);
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    background: var(--white);
+    color: var(--text-color);
+}
+
+input {
+    margin: 1rem;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 5px rgba(5, 150, 105, 0.3);
+}
+
+fieldset label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    margin-bottom: 0.5rem;
+    background: var(--white);
+}
+
+fieldset label:hover {
+    background: var(--secondary-light);
+    border-color: var(--secondary-color);
+}
+
+fieldset input[type="radio"] {
+    width: auto;
+    margin-right: 1rem;
+    margin-bottom: 0;
+    accent-color: var(--secondary-color);
+}
+
+.submit-btn {
+    width: 100%;
+    background: var(--secondary-color);
+    color: var(--white);
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: var(--primary-color);
+}
+
+.membership-benefits {
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px var(--shadow-light);
+    padding: 2rem;
+    position: sticky;
+    top: 2rem;
+    height: fit-content;
+}
+
+.membership-benefits h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: 1fr !important;
+    gap: 1rem;
+}
+
+.benefit-card {
+    background: var(--white);
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.5s ease;
+    box-shadow: 0 2px 4px var(--shadow-light);
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.benefit-card.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.benefit-card:hover, .benefit-card.selected {
+    border-color: var(--secondary-color);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px var(--shadow-medium);
+    background: var(--secondary-light);
+}
+
+.benefit-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+    margin: 1rem 0;
+}
+
+.info-link {
+    display: inline-block;
+    background: var(--secondary-color);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.info-link:hover {
+    background: var(--primary-color);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+    background-color: var(--white);
+    margin: 5% auto;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+    animation: slideIn 0.3s ease;
+    border: 2px solid var(--border-color);
+}
+
+.modal-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.modal-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.modal-content li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-color);
+}
+
+.modal-content li:last-child {
+    border-bottom: none;
+}
+
+.modal-content li:before {
+    content: "✓ ";
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.close {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: var(--primary-color);
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 2rem 1rem;
+    margin-top: 2rem;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.contact-info h3 {
+    margin-bottom: 1rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--secondary-color);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
+    .join-hero h1 {
+        font-size: 2rem;
+    }
+
+    .form-container {
+        padding: 0 0.5rem;
+    }
+
+    .membership-form,
+    .membership-benefits {
+        margin: .5rem 0 0 0;
+        margin-bottom: 0.5rem;
+    }
+
+
+    fieldset {
+        padding: 1rem;
+        min-width: 0;
+        width: 100%;
+    }
+
+    .modal-content {
+        width: 95%;
+        margin: 10% auto;
+        padding: 1.5rem;
+    }
+
+    #membershipLevel,
+    label[for="membershipLevel"] {
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+        font-size: 1rem;
+    }
+
+    #membershipLevel {
+        font-size: 1rem;
+        padding: 0.75rem;
+    }
+    #membership-benefits-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+        align-items: stretch;
+    }
+}

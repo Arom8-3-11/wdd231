@@ -1,0 +1,173 @@
+:root {
+    --primary-color: #22571C;
+    --primary-light: #dbeafe;
+    --secondary-color: #059669;
+    --secondary-light: #d1fae5;
+    --accent-color: #e8f5e8;
+    --text-color: #1f2937;
+    --background-color: #f9fafb;
+    --white: #ffffff;
+    --border-color: #e5e7eb;
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --shadow-medium: rgba(0, 0, 0, 0.15);
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    display: grid;
+    gap: 2rem;
+}
+
+.card {
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px var(--shadow-light);
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px var(--shadow-medium);
+}
+
+.thank-you-hero {
+    text-align: center;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+}
+
+.thank-you-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--white);
+}
+
+.application-summary h2,
+.next-steps h2,
+.contact-info h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.summary-content {
+    text-align: left;
+    background: var(--accent-color);
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.summary-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.summary-item:last-child {
+    border-bottom: none;
+}
+
+.summary-item label {
+    font-weight: 600;
+    color: var(--primary-color);
+    min-width: 150px;
+    margin-right: 1rem;
+}
+
+.summary-item span {
+    color: var(--text-color);
+    font-weight: 500;
+    flex: 1;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.step {
+    background: var(--accent-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    border: 2px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.step:hover {
+    border-color: var(--secondary-color);
+    background: var(--secondary-light);
+}
+
+.step h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.step p {
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.contact-info {
+    text-align: center;
+}
+
+.contact-details {
+    background: var(--accent-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.contact-details p {
+    margin: 0.5rem 0;
+    color: var(--text-color);
+}
+
+.contact-details strong {
+    color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 1rem;
+        gap: 1rem;
+    }
+    
+    .card {
+        padding: 1.5rem;
+    }
+    
+    .thank-you-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .summary-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+    }
+    
+    .summary-item label {
+        min-width: auto;
+        margin-right: 0;
+    }
+    
+    .steps-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,86 @@
+/* Large screen layout for join page */
+@media (min-width: 768px) {
+    .menu-toggle {
+        display: none;
+    }
+
+    .nav-links {
+        display: flex !important;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-links li a {
+        border-bottom: none;
+        border-right: 1px solid var(--secondary-color);
+    }
+
+    .nav-links li:last-child a {
+        border-right: none;
+    }
+
+    .header-content {
+        justify-content: flex-start;
+    }
+    .form-container {
+        grid-template-columns: 1fr 400px;
+        gap: 3rem;
+    }
+    
+    .join-hero {
+        padding: 4rem 2rem;
+    }
+    
+    .join-hero h1 {
+        font-size: 3rem;
+    }
+    
+    .membership-form,
+    .membership-benefits {
+        padding: 3rem;
+    }
+    
+    fieldset {
+        padding: 2rem;
+    }
+    
+    .modal-content {
+        width: 60%;
+        max-width: 600px;
+        margin: 10% auto;
+        padding: 3rem;
+    }
+    
+    .benefit-card {
+        padding: 2rem;
+    }
+    
+    .benefit-card h3 {
+        font-size: 1.3rem;
+    }
+    
+    .price {
+        font-size: 1.4rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .form-container {
+        grid-template-columns: 2fr 1fr;
+        gap: 4rem;
+    }
+    
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .membership-benefits {
+        position: sticky;
+        top: 2rem;
+        height: fit-content;
+    }
+}
