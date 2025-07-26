@@ -415,3 +415,10 @@ footer {
         align-items: stretch;
     }
 }
+
+/* Hide hamburger menu on screens wider than 768px */
+@media (min-width: 768px) {
+  .hamburger {
+    display: none !important;
+  }
+}
