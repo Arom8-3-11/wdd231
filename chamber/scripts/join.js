@@ -97,4 +97,21 @@ document.addEventListener('DOMContentLoaded', function() {
             joinHero.style.backgroundPosition = `${pos}% 0%`;
         }, 30);
     }
+
+    // Hamburger menu toggle for mobile (consistent with index/directory)
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('nav ul');
+    if (hamburger && nav) {
+        hamburger.addEventListener('click', function() {
+            nav.classList.toggle('show');
+            hamburger.classList.toggle('open');
+        });
+        // Optional: close menu when a link is clicked (for better UX)
+        nav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('show');
+                hamburger.classList.remove('open');
+            });
+        });
+    }
 });
