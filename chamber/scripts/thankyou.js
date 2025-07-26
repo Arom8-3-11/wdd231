@@ -230,4 +230,28 @@ function initializeThankYouPage() {
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
     initializeThankYouPage();
+
+    // Animate thank-you-hero gradient background horizontally left-to-right and right-to-left
+    const thankYouHero = document.querySelector('.thank-you-hero');
+    if (thankYouHero) {
+        thankYouHero.style.background = 'linear-gradient(90deg, var(--text-color), var(--primary-color), var(--secondary-color), var(--text-color))';
+        thankYouHero.style.backgroundSize = '300% 100%';
+        thankYouHero.style.backgroundRepeat = 'no-repeat';
+
+        let pos = 0;
+        let direction = 1;
+        const speed = 0.4;
+
+        setInterval(() => {
+            pos += direction * speed;
+            if (pos >= 100) {
+                pos = 100;
+                direction = -1;
+            } else if (pos <= 0) {
+                pos = 0;
+                direction = 1;
+            }
+            thankYouHero.style.backgroundPosition = `${pos}% 0%`;
+        }, 30);
+    }
 });
