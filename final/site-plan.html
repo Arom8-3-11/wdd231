@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Site Plan - Galaci Studio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/basic.css">
+</head>
+<body>
+    <header>
+        <h1>Galaci Studio</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Site Name</h2>
+            <p><strong>Galaci Studio</strong></p>
+            <p>
+                This name represents my personal artist name and digital portfolio. 
+            </p>
+        </section>
+        <section>
+            <h2>Site Purpose</h2>
+            <p>This site serves as my personal digital portfolio showcasing my photography work and promoting my artistic services. Provide quotes and allow customers to contact me for inquiries.</p>
+        </section>
+        <section>
+            <h2>Scenarios</h2>
+            <ul>
+                <li>How can I become a member of the Galaci Studio community?</li>
+                <li>What local events are happening this month?</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Color Schema</h2>
+            <ul class="color-schema-list">
+                <li>
+                    <span class="color-tab primary"></span>
+                    <strong>Primary Color (#53005E):</strong>
+                    Used for headings and key accents such as main text, header, and footer backgrounds.
+                </li>
+                <li>
+                    <span class="color-tab secondary"></span>
+                    <strong>Secondary Color (#009502):</strong>
+                    Used for links and buttons and other interactive elements.
+                </li>
+                <li>
+                    <span class="color-tab accent-one"></span>
+                    <strong>Accent One (#FFB4F4):</strong>
+                    Used for highlights and subtle backgrounds.
+                </li>
+                <li>
+                    <span class="color-tab accent-two"></span>
+                    <strong>Accent Two (#C5FFC6):</strong>
+                    Used for section backgrounds and other light accents such as text.
+                </li>
+                <li>
+                    <span class="color-tab accent-light"></span>
+                    <strong>Accent Light (#FFF4FF):</strong>
+                    Used for subtle page backgrounds.
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Typography</h2>
+            <ul>
+                <li>
+                    <span style="font-family: 'Roboto', Arial, sans-serif; font-weight: bold;">Roboto, Arial, sans-serif:</span>
+                    Used for all headings, footer and body text.
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Wireframe</h2>
+            <h3>Mobile View</h3>
+            <img src="images/mobile-view.jpg" alt="Mobile wireframe" style="max-width:100%;border:1px solid var(--accent-two);background:var(--white);">
+            <h3>Desktop View</h3>
+            <img src="images/larger-view.jpg" alt="Desktop wireframe" style="max-width:100%;border:1px solid var(--accent-two);background:var(--white);">
+        </section>
+    </main>
+    <footer>
+        <span class="footer-text">&copy; <span id="year"></span> Audrey Romrell. All rights reserved.</span>
+    </footer>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
