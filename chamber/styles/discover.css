@@ -9,8 +9,8 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem 1rem;
-    justify-content: center; /* Center grid horizontally */
-    align-items: start;      /* Align items to top */
+    justify-content: center;
+    align-items: start;
 }
 
 .sidebar {
@@ -22,7 +22,7 @@
     color: var(--primary-color);
     margin-bottom: 1rem;
     text-align: center;
-    justify-self: center; /* Center sidebar in its grid area */
+    justify-self: center;
 }
 
 .gallery {
@@ -39,7 +39,7 @@
         "card8";
     grid-template-columns: 1fr;
     gap: 2rem;
-    justify-content: center; /* Center gallery cards horizontally */
+    justify-content: center;
 }
 
 .card {
@@ -52,10 +52,9 @@
     flex-direction: column;
     align-items: center;
     transition: box-shadow 0.3s, transform 0.3s;
-    height: 100%; /* Ensure cards stretch to fill grid row height */
+    height: 100%;
 }
 
-/* Gallery card hover effect (like member cards) */
 .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 25px var(--shadow-medium);
@@ -116,7 +115,7 @@
     margin: 0;
     display: block;
     box-sizing: border-box;
-    margin-top: auto; /* Push button to the bottom of the card */
+    margin-top: auto;
 }
 
 .card button:hover,
@@ -125,12 +124,6 @@
     color: var(--primary-color);
 }
 
-.card img:hover {
-    filter: brightness(0.85) drop-shadow(0 0 10px var(--secondary-color));
-    transform: scale(1.05) rotate(-2deg);
-}
-
-/* Responsive columns for gallery */
 @media (min-width: 641px) and (max-width: 1024px) {
     .discover-main {
         grid-template-areas:

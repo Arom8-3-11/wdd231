@@ -1,4 +1,4 @@
-/* Medium screens: ensure gallery has 2 columns */
+
 @media (min-width: 641px) and (max-width: 1024px) {
     .discover-main {
         display: grid;
@@ -15,13 +15,16 @@
     .gallery {
         grid-area: gallery;
         display: grid;
-        /* Remove grid-template-areas, just use columns */
         grid-template-columns: 1fr 1fr;
         gap: 2rem;
     }
+
+    .card img:hover {
+        filter: brightness(0.85) drop-shadow(0 0 10px var(--secondary-color));
+        transform: scale(1.05) rotate(-2deg);
+    }
 }
 
-/* Large screens: ensure gallery has 3 columns */
 @media (min-width: 1025px) {
     .discover-main {
         display: grid;
@@ -38,13 +41,11 @@
     .gallery {
         grid-area: gallery;
         display: grid;
-        /* Remove grid-template-areas, just use columns */
         grid-template-columns: 1fr 1fr 1fr;
         gap: 2rem;
     }
 }
 
-/* Hide hamburger menu on larger screens */
 @media (min-width: 768px) {
     .hamburger {
         display: none !important;

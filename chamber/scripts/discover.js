@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Load area items and build cards
     fetch('data/discover.json')
         .then(res => res.json())
         .then(data => {
@@ -22,7 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
-    // Visit message logic
     const sidebar = document.getElementById('visit-message');
     const lastVisit = localStorage.getItem('discoverLastVisit');
     const now = Date.now();
