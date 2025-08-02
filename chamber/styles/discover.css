@@ -1,0 +1,171 @@
+.discover-main {
+    display: grid;
+    grid-template-areas:
+        "sidebar"
+        "gallery";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    justify-content: center; /* Center grid horizontally */
+    align-items: start;      /* Align items to top */
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background: var(--accent-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    text-align: center;
+    justify-self: center; /* Center sidebar in its grid area */
+}
+
+.gallery {
+    grid-area: gallery;
+    display: grid;
+    grid-template-areas:
+        "card1"
+        "card2"
+        "card3"
+        "card4"
+        "card5"
+        "card6"
+        "card7"
+        "card8";
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    justify-content: center; /* Center gallery cards horizontally */
+}
+
+.card {
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px var(--shadow-light);
+    padding: 1.5rem;
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.3s, transform 0.3s;
+    height: 100%; /* Ensure cards stretch to fill grid row height */
+}
+
+/* Gallery card hover effect (like member cards) */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px var(--shadow-medium);
+}
+
+.card h2 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.card figure {
+    margin: 0 0 1rem 0;
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 8px;
+    background: var(--accent-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.3s, transform 0.3s;
+}
+
+.card address {
+    font-style: normal;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.card p {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.card button,
+.learn-more-btn {
+    width: 100%;
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+    margin: 0;
+    display: block;
+    box-sizing: border-box;
+    margin-top: auto; /* Push button to the bottom of the card */
+}
+
+.card button:hover,
+.learn-more-btn:hover {
+    background: var(--accent-color);
+    color: var(--primary-color);
+}
+
+.card img:hover {
+    filter: brightness(0.85) drop-shadow(0 0 10px var(--secondary-color));
+    transform: scale(1.05) rotate(-2deg);
+}
+
+/* Responsive columns for gallery */
+@media (min-width: 641px) and (max-width: 1024px) {
+    .discover-main {
+        grid-template-areas:
+            "sidebar gallery";
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: auto 1fr;
+        justify-content: center;
+        align-items: start;
+    }
+    .gallery {
+        grid-template-areas:
+            "card1 card2"
+            "card3 card4"
+            "card5 card6"
+            "card7 card8";
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 1025px) {
+    .discover-main {
+        grid-template-areas:
+            "sidebar gallery";
+        grid-template-rows: auto 1fr;
+        justify-content: center;
+        align-items: start;
+    }
+    .gallery {
+        grid-template-areas:
+            "card1 card2 card3"
+            "card4 card5 card6"
+            "card7 card8 .";
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: center;
+    }
+}
+

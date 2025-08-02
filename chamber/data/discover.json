@@ -1,0 +1,52 @@
+{
+  "items": [
+    {
+      "name": "Lewis & Clark Park",
+      "address": "205 E Main St, Belgrade, MT 59714",
+      "description": "A beautiful city park with playgrounds, picnic areas, and summer events.",
+      "image": "images/LewisClarkPark.jpg"
+    },
+    {
+      "name": "Yellowstone Gateway Museum",
+      "address": "118 W Chinook St, Livingston, MT 59047",
+      "description": "Regional history museum with exhibits on Yellowstone and Montana.",
+      "image": "images/gateway.jpeg"
+    },
+    {
+      "name": "Gallatin River",
+      "address": "Gallatin River, Belgrade, MT",
+      "description": "Popular for fishing, rafting, and scenic views.",
+      "image": "images/gallatinriver.jpg"
+    },
+    {
+      "name": "Belgrade Special Events Center",
+      "address": "220 Spooner Rd, Belgrade, MT 59714",
+      "description": "Venue for concerts, sports, and community events.",
+      "image": "images/eventscenter.jpg"
+    },
+    {
+      "name": "Bozeman Yellowstone International Airport",
+      "address": "850 Gallatin Field Rd, Belgrade, MT 59714",
+      "description": "Montana's busiest airport, connecting the region to the world.",
+      "image": "images/airport.jpg"
+    },
+    {
+      "name": "Rocky Mountain Rodeo",
+      "address": "Fairgrounds, Belgrade, MT 59714",
+      "description": "Annual rodeo event showcasing local talent and western culture.",
+      "image": "images/rodeo.jpg"
+    },
+    {
+      "name": "Belgrade Community Library",
+      "address": "106 N Broadway, Belgrade, MT 59714",
+      "description": "Public library offering resources, programs, and events for all ages.",
+      "image": "images/library.jpg"
+    },
+    {
+      "name": "River Rock Pond",
+      "address": "River Rock Subdivision, Belgrade, MT 59714",
+      "description": "A scenic pond for walking, birdwatching, and relaxation.",
+      "image": "images/riverrockpond.jpg"
+    }
+  ]
+}

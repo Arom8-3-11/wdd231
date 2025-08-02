@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Discover Belgrade - Chamber of Commerce</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover Belgrade, Montana. Explore local attractions, parks, and features that make our area unique.">
+    <meta name="author" content="Audrey Romrell">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/discover.css">
+    <link rel="stylesheet" href="styles/discover-larger.css">
+    <link rel="icon" href="favicon.ico">
+    <script src="scripts/chamber.js" defer></script>
+    <script src="scripts/discover.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="images/logo.jpg" alt="Belgrade Chamber of Commerce Logo" class="logo">
+                </a>
+            </div>
+            <button class="hamburger" aria-label="Toggle navigation menu">☰</button>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="discover.html" class="active">Discover</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+        </ul>
+    </nav>
+    <main class="discover-main">
+        <aside class="sidebar" id="visit-message"></aside>
+        <section class="gallery" id="gallery">
+            <!-- Cards will be injected here by JS -->
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Belgrade Chamber of Commerce</h3>
+                <p>123 Main Street<br>Belgrade, MT 59714</p>
+                <p>Phone: (406) 555-0123<br>Email: info@belgradechamber.org</p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentyear"></span> Audrey Romrell | Last Modified: <span id="lastModified"></span></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
