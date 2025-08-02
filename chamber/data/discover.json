@@ -10,19 +10,19 @@
       "name": "Yellowstone Gateway Museum",
       "address": "118 W Chinook St, Livingston, MT 59047",
       "description": "Regional history museum with exhibits on Yellowstone and Montana.",
-      "image": "images/gateway.jpeg"
+      "image": "images/Gateway.jpeg"
     },
     {
       "name": "Gallatin River",
       "address": "Gallatin River, Belgrade, MT",
       "description": "Popular for fishing, rafting, and scenic views.",
-      "image": "images/gallatinriver.jpg"
+      "image": "images/GallatinRiver.jpg"
     },
     {
       "name": "Belgrade Special Events Center",
       "address": "220 Spooner Rd, Belgrade, MT 59714",
       "description": "Venue for concerts, sports, and community events.",
-      "image": "images/eventscenter.jpg"
+      "image": "images/EventsCenter.jpg"
     },
     {
       "name": "Bozeman Yellowstone International Airport",
@@ -46,7 +46,7 @@
       "name": "River Rock Pond",
       "address": "River Rock Subdivision, Belgrade, MT 59714",
       "description": "A scenic pond for walking, birdwatching, and relaxation.",
-      "image": "images/riverrockpond.jpg"
+      "image": "images/RiverRockPond.jpg"
     }
   ]
 }
