@@ -4,49 +4,49 @@
       "name": "Lewis & Clark Park",
       "address": "205 E Main St, Belgrade, MT 59714",
       "description": "A beautiful city park with playgrounds, picnic areas, and summer events.",
-      "image": "images/LewisClarkPark.jpg"
+      "image": "images/LewisClarkPark.webp"
     },
     {
       "name": "Yellowstone Gateway Museum",
       "address": "118 W Chinook St, Livingston, MT 59047",
       "description": "Regional history museum with exhibits on Yellowstone and Montana.",
-      "image": "images/Gateway.jpeg"
+      "image": "images/Gateway.webp"
     },
     {
       "name": "Gallatin River",
       "address": "Gallatin River, Belgrade, MT",
       "description": "Popular for fishing, rafting, and scenic views.",
-      "image": "images/GallatinRiver.jpg"
+      "image": "images/GallatinRiver.webp"
     },
     {
       "name": "Belgrade Special Events Center",
       "address": "220 Spooner Rd, Belgrade, MT 59714",
       "description": "Venue for concerts, sports, and community events.",
-      "image": "images/EventsCenter.jpg"
+      "image": "images/EventsCenter.webp"
     },
     {
       "name": "Bozeman Yellowstone International Airport",
       "address": "850 Gallatin Field Rd, Belgrade, MT 59714",
       "description": "Montana's busiest airport, connecting the region to the world.",
-      "image": "images/airport.jpg"
+      "image": "images/airport.webp"
     },
     {
       "name": "Rocky Mountain Rodeo",
       "address": "Fairgrounds, Belgrade, MT 59714",
       "description": "Annual rodeo event showcasing local talent and western culture.",
-      "image": "images/rodeo.jpg"
+      "image": "images/rodeo.webp"
     },
     {
       "name": "Belgrade Community Library",
       "address": "106 N Broadway, Belgrade, MT 59714",
       "description": "Public library offering resources, programs, and events for all ages.",
-      "image": "images/library.jpg"
+      "image": "images/library.webp"
     },
     {
       "name": "River Rock Pond",
       "address": "River Rock Subdivision, Belgrade, MT 59714",
       "description": "A scenic pond for walking, birdwatching, and relaxation.",
-      "image": "images/RiverRockPond.jpg"
+      "image": "images/RiverRockPond.webp"
     }
   ]
 }
