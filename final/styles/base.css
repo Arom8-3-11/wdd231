@@ -1,0 +1,562 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --primary-color: #53005E;
+    --secondary-color: #009502;
+    --accent-one: #FFB4F4;
+    --accent-two: #C5FFC6;
+    --accent-light: #FFF4FF;
+    --white: #fff;
+    --font-family: 'Roboto', Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    background: var(--accent-two);
+    color: var(--primary-color);
+    line-height: 1.6;
+}
+.hamburger {
+    display: block;
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    min-height: 44px;
+    min-width: 44px;
+}
+
+.hamburger:hover,
+.hamburger:focus {
+    color: var(--primary-color);
+    background-color: var(--accent-one);
+    transform: scale(1.1);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.hamburger.open {
+    font-size: 1.8rem;
+    transform: rotate(90deg);
+}
+
+.hamburger.open:hover,
+.hamburger.open:focus {
+    transform: rotate(90deg) scale(1.1);
+}
+
+
+nav {
+    background-color: var(--primary-color);
+    box-shadow: 0 2px 4px var(--white);
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+    display: none; /* Hide by default */
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--primary-color);
+    margin: 0;
+    padding: 0;
+    gap: 0;
+    z-index: 99;
+}
+
+nav ul.open,
+nav ul.show,
+.hamburger.open + ul {
+    display: flex; /* Show when open */
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    display: block;
+    color: var(--white);
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    margin: 0;
+    border-radius: 0;
+    background-color: var(--primary-color);
+    border: none;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    background-color: var(--accent-one);
+    color: var(--primary-color);
+}
+
+h1, h2, h3 {
+    font-family: var(--font-family);
+    color: var(--primary-color);
+}
+h1 {
+    text-align: center;
+    color: var(--white);
+}
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover, a:focus {
+    color: var(--accent-one);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1rem 0;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.logo-container {
+    flex: 0 0 auto;
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.hamburger {
+    display: block;
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    min-height: 44px;
+    min-width: 44px;
+}
+
+.hamburger:hover,
+.hamburger:focus {
+    color: var(--primary-color);
+    background-color: var(--accent-one);
+    transform: scale(1.1);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.hamburger.open {
+    font-size: 1.8rem;
+    transform: rotate(90deg);
+}
+
+.hamburger.open:hover,
+.hamburger.open:focus {
+    transform: rotate(90deg) scale(1.1);
+}
+
+
+.final-hero {
+    display: block;
+    color: var(--white);
+    font-size: 2rem;
+    padding: 3rem 1rem;
+    border-radius: 16px;
+    text-align: center;
+    /* min-height: 60h; Ensures vertical centering */
+    margin: 2rem auto;   /* Centers horizontally if width is set */
+    width: 90%;
+    box-sizing: border-box;
+}
+
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem;
+    padding: 2rem;
+    /* background-color: var(--accent-two); */
+}
+.portfolio-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+    padding: 2rem;
+    margin: 0;
+    border: 1px solid #C5FFC6;
+    transition: box-shadow 0.3s, transform 0.3s, background 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 450px;
+}
+.portfolio-card img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+.portfolio-card h2 {
+    margin-bottom: 1rem;
+}
+.portfolio-card a {
+    margin-top: 1rem;
+    color: #009502;
+    text-decoration: underline;
+}
+.portfolio-card:hover {
+    box-shadow: 0 4px 6px var(--shadow-light);
+    background: var(--accent-one);
+    transform: scale(1.03);
+}
+.card {
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+    padding: 2rem;
+    margin: 2rem auto;
+    border: 1px solid var(--accent-two);
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 8px 25px var(--accent-one);
+    transform: translateY(-4px);
+}
+
+.form-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 1200px;
+    padding: 2rem;
+    width: 90%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.contact-form {
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px var(--shadow-light);
+    padding: 2rem;
+    width: 100%;
+}
+
+.contact-form h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+.contact-form:hover {
+    box-shadow: 0 4px 6px var(--shadow-light);
+    background: var(--accent-one);
+    transform: scale(1.03);
+}
+fieldset {
+    border: 2px solid var(--accent-two);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    background: var(--accent-light);
+}
+
+legend {
+    font-weight: bold;
+    color: var(--primary-color);
+    padding: 0 1rem;
+    background: var(--white);
+    border-radius: 4px;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    border: 2px solid var(--secondary-color);
+    border-radius: 4px;
+    padding: 0.5rem 0.75rem;
+    background: transparent;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--accent-two);
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    background: var(--white);
+    color: var(--primary-color);
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 5px var(--accent-one);
+}
+
+fieldset label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 1rem;
+    border: 2px solid var(--secondary-color);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    margin-bottom: 0.5rem;
+    background: var(--accent-one);
+}
+
+fieldset label:hover {
+    background: var(--secondary-light);
+    border-color: var(--secondary-color);
+}
+
+fieldset input[type="radio"] {
+    width: auto;
+    margin-right: 1rem;
+    margin-bottom: 0;
+    accent-color: var(--secondary-color);
+}
+
+.submit-btn {
+    width: 100%;
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+    margin: 0;
+    display: block;
+    box-sizing: border-box;
+}
+
+.submit-btn:hover {
+    background: var(--accent-one);
+    color: var(--primary-color);
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+}
+
+.card-two {
+    text-align: center;
+    margin: 0 auto;
+    width: 90%;
+}
+
+nav ul {
+    justify-content: flex-start;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--accent-light);
+    padding-bottom: 2rem;
+    
+}
+
+.footer-content {
+    display: block;
+    color: var(--accent-light);
+    position: relative;
+    align-items: center;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.footer-bottom{
+    flex: 1;
+    text-align: center;
+    align-self: center;
+}
+
+.contact-info {
+    display: block;
+    min-width: 220px;
+    text-align: center;
+    padding: 1rem;
+}
+
+.submit-btn:hover {
+    background: var(--accent-one);
+    color: var(--primary-color);
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: stretch;
+}
+
+.card-one {
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.card-two {
+    text-align: center;
+}
+
+nav ul {
+    justify-content: flex-start;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--accent-light);
+    padding-bottom: 2rem;
+    
+}
+
+.footer-content {
+    display: block;
+    color: var(--accent-light);
+    position: relative;
+    align-items: center;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.footer-bottom{
+    flex: 1;
+    text-align: center;
+    align-self: center;
+}
+
+.contact-info {
+    display: block;
+    min-width: 220px;
+    text-align: center;
+    padding: 1rem;
+}
+
+.about {
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+    padding: 2rem;
+    margin: 2rem auto;
+    border: 1px solid var(--accent-one);
+    transition: box-shadow 0.3s, transform 0.3s;
+    width: 90%;
+    text-align: center;
+    color: var(--primary-color);
+}
+.about:hover {
+    box-shadow: 0 8px 25px var(--accent-one);
+    transform: scale(1.03);
+}
+.about h2 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+.about p {
+    margin-bottom: 0;
+    color: var(--primary-color);
+}
+
+.spotlights {
+    margin: 2rem auto;
+    padding: 2rem 1rem;
+    background: var(--accent-light);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    max-width: 1200px;
+    text-align: center;
+}
+.spotlight-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.spotlight-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    padding: 1.5rem;
+    min-width: 220px;
+    max-width: 320px;
+    flex: 1 1 220px;
+    text-align: left;
+    border: 1px solid var(--accent-one);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.spotlight-card h3 {
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+.spotlight-card img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+.spotlight-card p {
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+.spotlight-card .location {
+    font-size: 0.95rem;
+    color: var(--secondary-color);
+    margin-top: 0.5rem;
+}
+
+
+
+

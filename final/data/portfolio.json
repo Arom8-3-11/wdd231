@@ -1,0 +1,116 @@
+{
+  "projects": [
+    {
+      "number": 1,
+      "title": "Adventure Awaits",
+      "description": "Adventuring through the unknown.",
+      "image": "images/Adventure-Awaits.jpg",
+      "location": "Cedar City, UT"
+    },
+    {
+      "number": 2,
+      "title": "Bee",
+      "description": "Insect pollinator.",
+      "image": "images/bee.jpg",
+      "location": "Belgrade, MT"
+    },
+    {
+      "number": 3,
+      "title": "Water under the Bridge",
+      "description": "A serene view of a river under a bridge.",
+      "image": "images/Bridge.jpg",
+      "location": "Belgrade, MT"
+    },
+    {
+      "number": 4,
+      "title": "Buzy Bee",
+      "description": "Pollination and honey production.",
+      "image": "images/Buzy-Bee.jpg",
+      "location": "Belgrade, MT"
+    },
+    {
+      "number": 5,
+      "title": "Calm Stream",
+      "description": "A tranquil stream flowing through a narrow canyon.",
+      "image": "images/Calm-Stream.jpg",
+      "location": "Cedar City, UT"
+    },
+    {
+      "number": 6,
+      "title": "Canyon Wonders",
+      "description": "A breathtaking view of a canyon with unique rock formations.",
+      "image": "images/Canyon-Wonder.jpg",
+      "location": "Cedar City, UT"
+    },
+    {
+      "number": 7,
+      "title": "Fallen Tree",
+      "description": "A fallen tree in a slip canyon ravine.",
+      "image": "images/Fallen-Tree.jpg",
+      "location": "Cedar City, UT"
+    },
+    {
+      "number": 8,
+      "title": "Helena Montana Temple",
+      "description": "A beautiful depiction of the Helena Montana Temple.",
+      "image": "images/Helena-Temple.jpg",
+      "location": "Helena, MT"
+    },
+    {
+      "number": 9,
+      "title": "Honey Suckle Tree",
+      "description": "A beautiful depiction of a honey suckle tree in bloom.",
+      "image": "images/HoneySuckle.jpg",
+      "location": "Belgrade, MT"
+    },
+    {
+      "number": 10,
+      "title": "Karrera Falls",
+      "description": "A beautiful depiction of Karrera Falls.",
+      "image": "images/Karrera-Falls.jpg",
+      "location": "Cedar City, UT"
+    },
+    {
+      "number": 11,
+      "title": "Lilac",
+      "description": "A beautiful depiction of a lilac bush in bloom.",
+      "image": "images/Lilac.jpg",
+      "location": "Belgrade, MT"
+    },
+    {
+      "number": 12,
+      "title": "Lily",
+      "description": "A beautiful depiction of a lily flower in bloom.",
+      "image": "images/Lily.jpg",
+      "location": "Belgrade, MT"
+    },
+    {
+      "number": 13,
+      "title": "Silhouette",
+      "description": "A beautiful depiction of a silhouette.",
+      "image": "images/Silhouette.jpg",
+      "location": "Bozeman, MT"
+    },
+    {
+      "number": 14,
+      "title": "Spider",
+      "description": "A close depiction of a spider.",
+      "image": "images/Spider.jpg",
+      "location": "Belgrade, MT"
+    },
+    {
+      "number": 15,
+      "title": "Tulip",
+      "description": "A beautiful depiction of a tulip.",
+      "image": "images/Tulip.jpg",
+      "location": "Helena, MT"
+    },
+    {
+      "number": 16,
+      "title": "Valley",
+      "description": "A beautiful depiction of a valley.",
+      "image": "images/Valley.jpg",
+      "location": "Bozeman, MT"
+    }
+  ]
+}

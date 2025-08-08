@@ -1,0 +1,64 @@
+@media (min-width: 1025px) {
+    body {
+        font-size: 1.1rem;
+    }
+
+    /* .portfolio-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2.5rem;
+    } */
+
+    header, footer {
+        padding: 2rem 0;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+        gap: 2rem;
+        align-items: start;
+    }
+
+    /* Swap positions: card-two left, form-container right */
+    .card-two {
+        grid-column: 1;
+        grid-row: 2;
+        /* Modal styles */
+        position: sticky;
+        top: 50%;
+        left: 10%;
+        /* transform: translateY(-50%); */
+        z-index: 100;
+        background: #fff;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+        border-radius: 1rem;
+        padding: 2rem;
+        width: 30vw;
+        max-width: 400px;
+        height: auto;
+        overflow-y: auto;
+        display: block;
+    }
+
+    /* form-container now on the right */
+    .form-container {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .card-one {
+        grid-column: 1 / span 2;
+        grid-row: 1;
+        padding: 3rem 2rem;
+    }
+
+}

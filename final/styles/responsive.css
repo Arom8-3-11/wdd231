@@ -1,0 +1,117 @@
+@media (max-width: 1024px) {
+    
+    
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: stretch;
+    }
+    
+
+    .card-one,
+    .form-container,
+    .card-two {
+        grid-column: auto;
+        grid-row: auto;
+        position: static;
+        padding: 1.5rem 1rem;
+        height: auto;
+    }
+}
+
+@media (min-width: 600px) {
+    .menu-toggle {
+        display: none;
+    }
+    .hamburger {
+        display: none !important;
+    }
+    nav ul {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+        align-items: center !important;
+        position: static !important;
+        width: 100% !important;
+        background: none !important;
+        margin: 0 auto !important;
+        padding: 0 1rem !important;
+        gap: 0.5rem !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+    nav li {
+        margin: 0 !important;
+    }
+    nav a {
+        display: inline-block !important;
+        padding: 1rem 1.5rem !important;
+        margin: 0 0.25rem !important;
+        border-radius: 6px !important;
+        background-color: var(--primary-color) !important;
+        border: 2px solid var(--accent-one) !important;
+        font-weight: 500 !important;
+        color: var(--white) !important;
+        text-decoration: none !important;
+    }
+    nav a:hover,
+    nav a.active {
+        background-color: var(--accent-one) !important;
+        color: var(--primary-color) !important;
+    }
+    ul {
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        padding-inline-start: 40px;
+        unicode-bidi: isolate;
+    }
+    .nav-links {
+        display: flex !important;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-links li a {
+        border-bottom: none;
+        border-right: 1px solid var(--secondary-color);
+    }
+
+    .nav-links li:last-child a {
+        border-right: none;
+    }
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 0.5rem;
+    }
+
+    header, footer {
+        padding: 1rem 0.5rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+}

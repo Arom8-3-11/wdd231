@@ -2,7 +2,40 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
+    margin: 2rem 0;
+    width: 100%;
+    background: #f8f8f8; /* fallback for visibility */
+    min-height: 200px;    /* ensures grid is visible even if empty */
+}
+
+.portfolio-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.10);
     padding: 2rem;
+    border: 2px solid #53005E; /* more visible border */
+    transition: box-shadow 0.3s, transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 200px; /* ensures card is visible */
+    color: #53005E;    /* text color for visibility */
+}
+
+.portfolio-card img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.portfolio-card h2 {
+    margin-bottom: 1rem;
+}
+
+.portfolio-card a {
+    margin-top: 1rem;
+    color: #009502;
+    text-decoration: underline;
 }
 
 .card {
@@ -72,6 +105,33 @@
 
 .close:hover {
     color: #000;
+}
+
+.modal-image-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto 1rem auto;
+}
+
+.modal-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.modal-watermark {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    color: rgba(255,255,255,0.7);
+    font-size: 2rem;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: bold;
+    pointer-events: none;
+    text-shadow: 1px 1px 8px rgba(0,0,0,0.5);
+    z-index: 2;
 }
 
 @keyframes fadeIn {

@@ -1,38 +1,37 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const portfolioGrid = document.getElementById('portfolioGrid');
     const modal = document.getElementById('projectModal');
     const modalBody = document.getElementById('modalBody');
     const closeBtn = document.querySelector('.close');
+    const portfolioGrid = document.getElementById('portfolioGrid');
 
-    // Load portfolio images and create cards
-    function loadPortfolioCards() {
-        const images = getPortfolioImages();
-        
-        images.forEach(image => {
-            const cardElement = createCardElement(image);
-            portfolioGrid.appendChild(cardElement);
+    // Display all projects from portfolio.json
+    fetch('data/portfolio.json')
+        .then(response => response.json())
+        .then(data => {
+            portfolioGrid.innerHTML = '';
+            if (Array.isArray(data.projects)) {
+                data.projects.forEach(project => {
+                    const card = document.createElement('div');
+                    card.className = 'portfolio-card';
+                    card.innerHTML = `
+                        <figure>
+                            <img src="${project.image}" alt="${project.title}" loading="lazy">
+                        </figure>
+                        <h3>${project.number}. ${project.title}</h3>
+                        <p>${project.description}</p>
+                        <p class="location">${project.location}</p>
+                    `;
+                    // Add click event for modal popup
+                    card.addEventListener('click', function() {
+                        showModal(project);
+                    });
+                    portfolioGrid.appendChild(card);
+                });
+            }
+        })
+        .catch(err => {
+            portfolioGrid.innerHTML = "<p>Failed to load portfolio data.</p>";
         });
-    }
-
-    // Create card element
-    function createCardElement(image) {
-        const card = document.createElement('div');
-        card.className = 'card';
-        card.setAttribute('data-project', image.id);
-        
-        card.innerHTML = `
-            <img src="${image.thumbnail}" alt="${image.alt}">
-            <h3>${image.title}</h3>
-            <p>${image.description}</p>
-        `;
-        
-        // Add click event listener
-        card.addEventListener('click', function() {
-            showModal(image);
-        });
-        
-        return card;
-    }
 
     // Close modal events
     closeBtn.addEventListener('click', closeModal);
@@ -50,16 +49,16 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     function showModal(project) {
+        // Use the same image, but larger if available
+        const imageSrc = project.image;
         modalBody.innerHTML = `
-            <h2>${project.title} - Detailed View</h2>
-            <img src="${project.largeImage}" alt="${project.alt}" style="width: 100%; height: 300px; object-fit: cover; border-radius: 4px; margin-bottom: 1rem;">
-            <p>${project.detailedDescription}</p>
-            <h3>Technologies Used:</h3>
-            <ul>
-                ${project.technologies.map(tech => `<li>${tech}</li>`).join('')}
-            </ul>
-            <p><strong>Category:</strong> ${project.category.replace('-', ' ')}</p>
-            <a href="${project.link}" target="_blank" style="display: inline-block; margin-top: 1rem; padding: 0.5rem 1rem; background: #007bff; color: white; text-decoration: none; border-radius: 4px;">View Project</a>
+            <div class="modal-image-container">
+                <img src="${imageSrc}" alt="${project.title}" class="modal-image">
+                <div class="modal-watermark">Galaci Studios</div>
+            </div>
+            <h2>${project.title}</h2>
+            <p>${project.description}</p>
+            <p class="location">${project.location}</p>
         `;
         modal.style.display = 'block';
     }
@@ -68,9 +67,31 @@ document.addEventListener('DOMContentLoaded', function() {
         modal.style.display = 'none';
     }
 
-    // Initialize portfolio
-    loadPortfolioCards();
-});
-        modal.style.display = 'none';
+    // Spotlights for index.html
+    const spotlights = document.getElementById("spotlights");
+    if (spotlights) {
+        fetch("portfolio.json")
+            .then(response => response.json())
+            .then(data => {
+                if (Array.isArray(data.sections)) {
+                    // Pick first three sections for spotlight (customize as needed)
+                    const featured = data.sections.slice(0, 3);
+                    featured.forEach(section => {
+                        const card = document.createElement("div");
+                        card.className = "card portfolio-card";
+                        card.innerHTML = `
+                            <h2>${section.title}</h2>
+                            <p>${section.description || ""}</p>
+                            ${section.image ? `<img src="${section.image}" alt="${section.title}">` : ""}
+                            ${section.link ? `<a href="${section.link}" target="_blank">View Project</a>` : ""}
+                        `;
+                        spotlights.appendChild(card);
+                    });
+                }
+            })
+            .catch(() => {
+                spotlights.innerHTML = "<p>Unable to load spotlights.</p>";
+            });
     }
 });
+
