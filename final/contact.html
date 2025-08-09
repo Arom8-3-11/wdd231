@@ -4,8 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Final Project</title>
+    <meta name="description" content="Contact Galaci Studios for inquiries, portfolio requests, or general questions.">
+    <meta name="author" content="Audrey Romrell">
     <link rel="stylesheet" href="styles/base.css">
-    <script src="scripts/main.js" defer></script>
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/contact.css">
+    <link rel="stylesheet" href="styles/spotlights.css">
+    <script src="scripts/spotlights.js" defer></script>
+    <script src="scripts/main.js"></script>
     <script src="scripts/portfolio.js"></script>
     <script src="scripts/contact.js"></script>
     <link rel="icon" href="favicon.ico">
@@ -78,6 +85,9 @@
                                 <option value="Other">Other</option>
                             </select>
                         </label>
+                        <label for="message" title="Enter your message">
+                            Message *
+                            <textarea id="message" name="message" title="Enter your message" rows="5" placeholder="Type your message here..." required></textarea>
                     </fieldset>
                     <input type="hidden" id="timestamp" name="timestamp">
                     <input type="submit" value="Submit Application" class="submit-btn">
@@ -87,6 +97,10 @@
         </div>
 
         <section id="contactPortfolio" class="portfolio-grid"></section>
+        <section class="spotlights">
+            <h2>Spotlights</h2>
+            <div class="spotlight-container"></div>
+        </section>
     </main>
     
     <footer>

@@ -2,12 +2,7 @@
     body {
         font-size: 1.1rem;
     }
-
-    /* .portfolio-grid {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 2.5rem;
-    } */
-
+    
     header, footer {
         padding: 2rem 0;
     }

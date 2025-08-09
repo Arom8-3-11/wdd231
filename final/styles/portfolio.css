@@ -70,7 +70,7 @@
     margin-bottom: 0;
 }
 
-/* Modal Styles */
+/* Modal Styles for both portfolio and spotlights */
 .modal {
     display: none;
     position: fixed;

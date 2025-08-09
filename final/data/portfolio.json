@@ -11,7 +11,7 @@
       "number": 2,
       "title": "Bee",
       "description": "Insect pollinator.",
-      "image": "images/bee.jpg",
+      "image": "images/Bee.jpg",
       "location": "Belgrade, MT"
     },
     {
@@ -58,8 +58,8 @@
     },
     {
       "number": 9,
-      "title": "Honey Suckle Tree",
-      "description": "A beautiful depiction of a honey suckle tree in bloom.",
+      "title": "Mayday Tree",
+      "description": "A beautiful depiction of a Mayday tree in bloom.",
       "image": "images/HoneySuckle.jpg",
       "location": "Belgrade, MT"
     },
@@ -88,7 +88,7 @@
       "number": 13,
       "title": "Silhouette",
       "description": "A beautiful depiction of a silhouette.",
-      "image": "images/Silhouette.jpg",
+      "image": "images/Silhouette.JPG",
       "location": "Bozeman, MT"
     },
     {
